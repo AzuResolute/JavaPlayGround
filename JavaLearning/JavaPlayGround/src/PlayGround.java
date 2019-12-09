@@ -39,6 +39,8 @@ public class PlayGround {
         int max = Arrays.stream(numbers.split(" ")).mapToInt(i -> Integer.parseInt(i)).max().getAsInt();
         return String.format("%d %d",max, min);
     }
+
+
 }
 
 // shortcut
