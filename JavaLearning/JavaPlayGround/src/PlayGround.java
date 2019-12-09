@@ -29,10 +29,8 @@ public class PlayGround {
     }
 
     public static String highAndLow(String numbers) {
-        var streamFirst = Arrays.stream(numbers.split(" "));
-        var streamSecond = Arrays.stream(numbers.split(" "));
-        String least = streamSecond.reduce(String.valueOf(Integer.MAX_VALUE), (a,b) -> Integer.parseInt(a) < Integer.parseInt(b) ? a : b);
-        String greatest = streamFirst.reduce(String.valueOf(Integer.MIN_VALUE), (a,b) -> Integer.parseInt(a) > Integer.parseInt(b) ? a : b);
+        String least = Arrays.stream(numbers.split(" ")).reduce(String.valueOf(Integer.MAX_VALUE), (a,b) -> Integer.parseInt(a) < Integer.parseInt(b) ? a : b);
+        String greatest = Arrays.stream(numbers.split(" ")).reduce(String.valueOf(Integer.MIN_VALUE), (a,b) -> Integer.parseInt(a) > Integer.parseInt(b) ? a : b);
         return greatest + " " + least;
     }
 }
