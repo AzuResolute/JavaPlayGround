@@ -33,6 +33,12 @@ public class PlayGround {
         String greatest = Arrays.stream(numbers.split(" ")).reduce(String.valueOf(Integer.MIN_VALUE), (a,b) -> Integer.parseInt(a) > Integer.parseInt(b) ? a : b);
         return greatest + " " + least;
     }
+
+    public static String highAndLowBP1(String numbers) {
+        int min = Arrays.stream(numbers.split(" ")).mapToInt(i -> Integer.parseInt(i)).min().getAsInt();
+        int max = Arrays.stream(numbers.split(" ")).mapToInt(i -> Integer.parseInt(i)).max().getAsInt();
+        return String.format("%d %d",max, min);
+    }
 }
 
 // shortcut
