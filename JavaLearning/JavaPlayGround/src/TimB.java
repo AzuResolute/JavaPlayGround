@@ -1,11 +1,17 @@
 public class TimB {
 
     public static void main(String[] args) {
-        Car porsche = new Car("Porsche", "red");
-        Car kia = new Car("Kia","blue");
-        // Code Blocks and Flow Challenge
-        kia.setColor("red");
-        System.out.printf("%s", kia.getColor());
+
+        BankAccount czaraccount = new BankAccount("Czar",10_000);
+        System.out.println("Current Balance: " + czaraccount.getBalance());
+        czaraccount.deposit(1700);
+        czaraccount.withdraw(4200);
+
+//        Car porsche = new Car("Porsche", "red");
+//        Car kia = new Car("Kia","blue");
+//        // Code Blocks and Flow Challenge
+//        kia.setColor("red");
+//        System.out.printf("%s", kia.getColor());
 
 //        boolean gameOver = true;
 //        int score = 10000;
