@@ -8,9 +8,7 @@ import java.util.stream.Stream;
 
 public class PlayGround {
     public static void main(String[] args) {
-        System.out.println("Hello World");
-        String strums = "9 7 4 5 1 3 2";
-        System.out.println(highAndLow(strums));
+
     }
 
     // Learn Java Streams

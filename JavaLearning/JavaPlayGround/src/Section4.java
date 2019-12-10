@@ -1,18 +1,26 @@
 public class Section4 {
     public static void main(String[] args) {
 
-        System.out.println(toMilesPerHour(1.5));
-        System.out.println(toMilesPerHour(10.25));
-        System.out.println(toMilesPerHour(-5.6));
-        System.out.println(toMilesPerHour(25.42));
-
-        printConversion(1.5);
-
-//      checkNumber(5);
-//      checkNumber(-5);
-//      checkNumber(0);
     }
 
+    // Barking Dog
+    public static boolean shouldWakeUp (boolean isBarking, int hourOfDay) {
+        return isBarking && (hourOfDay < 8 || hourOfDay > 22) && (hourOfDay >= 0 && hourOfDay <= 23);
+    }
+
+    // MegaBytes Converter
+    public static void printMegaBytesAndKiloBytes (int kiloBytes) {
+        int kb2mb = 1024;
+        if(kiloBytes >= 0)
+            System.out.printf("%d KB = %d MB and %d KB",
+                    kiloBytes,
+                    Math.floorDiv(kiloBytes, kb2mb),
+                    kiloBytes % kb2mb);
+        else
+            System.out.println("Invalid Value");
+    }
+
+    //SpeedConverter
     public static long toMilesPerHour (double kilometersPerHour) {
         return kilometersPerHour >= 0 ? Math.round(kilometersPerHour / 1.609) : -1;
     }
