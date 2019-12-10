@@ -1,7 +1,22 @@
 public class Section4 {
     public static void main(String[] args) {
-
+        System.out.printf("%B", isLeapYear(-1600));
+        System.out.printf("%B", isLeapYear(1600));
+        System.out.printf("%B", isLeapYear(2017));
+        System.out.printf("%B", isLeapYear(2000));
     }
+
+    // Leap Year Calculator
+
+    public static boolean isLeapYear (int year) {
+        if((0 < year) && (year <= 9999)) {
+            if((year % 4 == 0) && (!(year % 100 == 0) || (year % 400 == 0))){
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     // Barking Dog
     public static boolean shouldWakeUp (boolean isBarking, int hourOfDay) {
