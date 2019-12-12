@@ -7,12 +7,6 @@ public class TimB {
         czaraccount.deposit(1700);
         czaraccount.withdraw(4200);
 
-//        Car porsche = new Car("Porsche", "red");
-//        Car kia = new Car("Kia","blue");
-//        // Code Blocks and Flow Challenge
-//        kia.setColor("red");
-//        System.out.printf("%s", kia.getColor());
-
 //        boolean gameOver = true;
 //        int score = 10000;
 //        int levelCompleted = 8;

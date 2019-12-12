@@ -38,4 +38,6 @@ public class Point {
     public double distance(Point pt) {
         return this.distance(pt.getX(),pt.getY());
     }
+
+
 }
