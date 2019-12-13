@@ -27,10 +27,6 @@ public class TimB {
 //        czaraccount.deposit(1700);
 //        czaraccount.withdraw(4200);
 
-//        boolean gameOver = true;
-//        int score = 10000;
-//        int levelCompleted = 8;
-//        int bonus = 200;
 
     }
 }
