@@ -1,19 +1,15 @@
+import javax.management.monitor.Monitor;
 import java.lang.management.MonitorInfo;
 
 public class TimB {
 
     public static void main(String[] args) {
 
-        // Begin Composition
-        Dimensions dim = new Dimensions(20,20,5);
-        Case theCase = new Case("220B","Dell", "2400", dim);
-        Monitor theMonitor = new Monitor("27inc Beast", "Acer", 27, new Resolution(2540,1440));
-        Motherboard mb = new Motherboard("BJ-200", "Asus",4,6,"v3.69");
-        PC thePC = new PC(theCase, theMonitor, mb);
-
-        thePC.getMonitor().drawPixelAt(150,1200,"kia");
-        thePC.getMotherboard().loadProgram("Babberlicious Boo");
-        thePC.getTheCase().pressPower();
+        // House class
+        //  ^ Bedroom
+        //  ^ Ceiling
+        //  ^ Doors
+        //  ^ Bathroom
 
         // End Composition
 
