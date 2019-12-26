@@ -5,11 +5,7 @@ public class TimB {
 
     public static void main(String[] args) {
 
-        // House class
-        //  ^ Bedroom
-        //  ^ Ceiling
-        //  ^ Doors
-        //  ^ Bathroom
+
 
         // End Composition
 
