@@ -10,12 +10,55 @@ public class SortAlgo {
     public static void main(String[] args) {
         System.out.println("Hello");
 //        BubbleSort.result();
-        MergeSort.result();
-
+//        MergeSort.result();
+        QuickSort.result();
     }
 }
 
-class
+class QuickSort extends Sort {
+
+    public static int[] swap (int[] array, Integer pointerA, Integer pointerB) {
+        int temp = array[pointerA];
+        array[pointerA] = array[pointerB];
+        array[pointerB] = temp;
+        return array;
+    }
+
+    public static int partition (int[] array, Integer start, Integer end) {
+        start = start != null ? start : 0;
+        end = end != null ? end : array.length + 1;
+
+        int pivot = array[start];
+        int swapIndex = start;
+
+        for(int i = start + 1; i < array.length; i++) {
+            if(pivot > array[i]) {
+                swapIndex++;
+                array = swap(array, swapIndex, i);
+            }
+        }
+        array = swap(array, start, swapIndex);
+        System.out.println(Arrays.toString(array));
+        return swapIndex;
+    }
+
+    public static int[] quickSort (int[] array, Integer start, Integer end) {
+        start = start != null ? start : 0;
+        end = end != null ? end : array.length - 1;
+        // base case
+        if(start < end) {
+            int pivotIndex = partition(array, start, end);
+            quickSort(array, start, pivotIndex - 1);
+            quickSort(array, pivotIndex + 1, end);
+        }
+        return array;
+    }
+
+    public static void result() {
+        System.out.println(quickSort(sample, null, null));
+        Arrays.stream(sample).forEach(System.out::println);
+    }
+}
 
 class MergeSort extends Sort {
 
