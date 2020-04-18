@@ -9,6 +9,11 @@ public class MapProgram {
 
         // put(key, value) - adds a key / value pair. returns null if brand new k/v pair. otherwise, return the old value
         // get(key) - returns the value of the given key
+        // remove(key) - removes a key value pair given key
+        // remove(key, value) - removes key value pair given key and value
+        // replace(key, value) - replace value if key already exists
+
+        // - Map does not allow itself to be used as a key
 
         // loop through key value pairs
 //        for(String key : languages.keySet()) {
@@ -39,11 +44,13 @@ public class MapProgram {
 
         System.out.println("===========================================================================================");
 
-        languages.keySet().forEach(k -> System.out.println(k));
+        languages.remove("Algol", "an algorithmic language");
+        System.out.println(languages.replace("Java", "Ye Olde Goon Squad"));
+        System.out.println(languages.replace("C#", "Another Olde Good Squad"));
 
-        for(String key : languages.keySet()) {
-            System.out.println(key + " : " + languages.get(key) + " :)");
-        }
+        languages.keySet().forEach(k -> System.out.println(k));
+        languages.keySet().forEach(k -> System.out.println(k + " : " + languages.get(k)));
+
     }
 
 
